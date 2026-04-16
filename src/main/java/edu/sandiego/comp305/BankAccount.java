@@ -5,8 +5,11 @@ import java.util.List;
 
 public class BankAccount {
     private double balance;
+
     private String accountHolder;
+
     private String accountType; // e.g., "SAVINGS" or "CHECKING"
+
     private List<String> history;
 
     public BankAccount(String name, String type, double initialDeposit) {
