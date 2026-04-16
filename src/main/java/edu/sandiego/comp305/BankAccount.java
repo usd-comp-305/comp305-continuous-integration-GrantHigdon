@@ -2,6 +2,7 @@ package edu.sandiego.comp305;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class BankAccount {
     private double balance;
@@ -33,7 +34,7 @@ public class BankAccount {
     }
 
     public boolean isAccountType(String type) {
-        return this.accountType == type;
+        return Objects.equals(this.accountType, type);
     }
 
     public double getBalance() {
