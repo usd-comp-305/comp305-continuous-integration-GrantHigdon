@@ -29,8 +29,10 @@ public class BankAccount {
     }
 
     public void withdraw(double amount) {
-        balance -= amount;
-        history.add("Withdrew: $" + amount);
+        if (balance - amount >= 0) {
+            balance -= amount;
+            history.add("Withdrew: $" + amount);
+        }
     }
 
     public boolean isAccountType(String type) {
